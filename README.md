@@ -57,6 +57,4 @@ The RCMS model  outperformed existing large language models such as GPT-3.5 and 
  References
 - [Multimodal Magic: Reddit Thread Summarization]
 
- Contact
-Let me know if you would like any changes or additional information!
 
