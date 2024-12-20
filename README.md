@@ -9,14 +9,12 @@ This project implements multimodal discourse summarization based on the MMRSUM a
  Codemixed Hinglish Summarization:  Includes a dataset (HMMRSUM) specifically designed for summarizing discussions in Hinglish.
  Relevant-Cluster-based Multi-stage Summarization (RCMS):  A five-step approach that clusters comments based on relevance, selects the most pertinent images, and generates comprehensive textual summaries.
 
- Files
-1. clipscore_final_analysis.py
-   - This script is used for calculating the CLIPScore, which is essential for measuring the alignment between images and textual data in Reddit threads.
+
+1. The script is used for calculating the CLIPScore, which is essential for measuring the alignment between images and textual data in Reddit threads.
    - It processes text embeddings and image embeddings, computes the similarity score, and selects the most relevant images to be included in the final multimodal summary.
 
-2. complete_finalmodel.py
-   - This script contains the main model implementation for the multimodal summarization task. It uses the RCMS approach to:
- - Cluster comments using RoBERTa-based sentence embeddings.
+2. The script contains the main model implementation for the multimodal summarization task. It uses the RCMS approach to:
+ - Cluster comments using RoBERTa-based sentence embeddings and Agglomerative Clustering.
      - Generate a textual summary using a transformer model (BART).
      - Integrate both textual and image elements for a holistic summarization of Reddit threads.
    - The model is evaluated using ROUGE and BERTScore for text, and CLIPScore for text-image alignment.
@@ -24,7 +22,6 @@ This project implements multimodal discourse summarization based on the MMRSUM a
 3. The research paper titled "Beyond Text Unlocking Multimodal Magic:  Harnessing New Reddit Thread Datasets for Multimodal Summarization" describes the creation and evaluation of the MMRSUM and HMMRSUM datasets. 
    - The paper introduces RCMS, discusses related work, and presents experimental results, showcasing the performance of the model compared to existing large language models (LLMs).
 
-How to Run
 Prerequisites
 - Python 3.x
 - Libraries:
@@ -34,18 +31,6 @@ Prerequisites
   - `numpy`
   - `pandas`
   - `clip`
-
-Running the Code
-1. Install the required dependencies
-  
-2. Run the `complete_finalmodel.py` script to execute the multimodal summarization:
-   bash
-   python complete_finalmodel.py
-  
-3. To evaluate the CLIPScore for image-text alignment, run:
-   bash
-   python clipscore_final_analysis.py
-  
 
 Datasets
  MMRSUM Dataset
