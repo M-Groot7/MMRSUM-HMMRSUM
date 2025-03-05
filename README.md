@@ -34,7 +34,7 @@ Prerequisites
 
 Datasets
  MMRSUM Dataset
-- A dataset of 2000 Reddit threads that include both text and image components.
+- A dataset of 7130 Reddit threads that include both text and image components.
 - Used for English-based multimodal summarization.
 
  HMMRSUM Dataset
